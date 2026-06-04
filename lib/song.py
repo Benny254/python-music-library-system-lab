@@ -1,5 +1,4 @@
 class Song:
-    # Class Attributes
     count = 0
     genres = []
     artists = []
@@ -11,12 +10,11 @@ class Song:
         self.artist = artist
         self.genre = genre
 
-        # Trigger class methods when a new song is created
-        self.__class__.add_song_to_count()
-        self.__class__.add_to_genres(genre)
-        self.__class__.add_to_artists(artist)
-        self.__class__.add_to_genre_count(genre)
-        self.__class__.add_to_artists_count(artist)
+        Song.add_song_to_count()
+        Song.add_to_genres(genre)
+        Song.add_to_artists(artist)
+        Song.add_to_genre_count(genre)
+        Song.add_to_artists_count(artist)
 
     @classmethod
     def add_song_to_count(cls):
